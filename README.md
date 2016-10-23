@@ -10,11 +10,13 @@ A CSS3 based radial progress bar
 3. Create a new instance of the progress bar
     ```javascript
     var newProgressBar = new Css3ProgressBar('container1');
+    ```
 4. Call the setProgress function to set its progress 
     ```javascript
     document.getElementById('percentValue').addEventListener('keyup', function() {
         newProgressBar.setProgress(this.value);
     }, false);
+    ```
 
 ##  Todo
 1. Create closure to make each module deal with its own mask and fill
