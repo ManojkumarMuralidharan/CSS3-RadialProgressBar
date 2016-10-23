@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>CSS 3 Based radial progress indicator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <!-- Progress Bar Template-->
+    <script id="progressTemplate" type="text/template">
+        <div class="radial-progress">
+        <div class="circle">
+            <div class="mask" id="mask">
+            <div class="fill" id="fill"></div>
+            </div>
+        </div>
+        </div>
+    </script>
+</head>
+<body>
+<div>
+  <span>  Radial Progress bar with CSS and JS</span>
+</div>
+<!-- Progress Bar Container-->
+<div id="container1">
+</div>
+
+
+<!-- Controller Section -->
+<div>
+  <label>Animate the progress to</label>
+  <input type="text" length="15" id="percentValue" placeholder="Enter a value to animate">
+</div>
+
+<!--Inspired from https://medium.com/@andsens/radial-progress-indicator-using-css-a917b80c43f9#.6bjwej9v3 -->
+<script src="./progress.js" type="text/javascript"></script>
+</body>
+</html>

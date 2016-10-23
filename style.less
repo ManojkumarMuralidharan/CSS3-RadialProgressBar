@@ -1,0 +1,49 @@
+body{
+  font-family: 'Roboto', 'sans-serif';
+}
+.radial-progress {
+  @circle-size: 120px;
+  @circle-background: white;
+  @circle-color: #97a71d;
+  background-color: @circle-background;
+  width: @circle-size;
+  height: @circle-size;
+  .circle {
+    .mask,
+    .fill {
+      width: @circle-size;
+      height: @circle-size;
+      position: absolute;
+      border-radius: 50%;
+      clip: rect(0px, @circle-size, @circle-size/2, 0px);
+      -webkit-backface-visibility: hidden;
+    }
+    .mask {
+      .fill {
+        background-color: @circle-color;
+      }
+    }
+    .mask::after {
+      width: @circle-size/(1.5);
+      height: @circle-size/(1.5);
+      content: attr(data-content);
+      text-align: center;
+      vertical-align: bottom;
+      top: @circle-size/6;
+      left: @circle-size/6;
+      border-radius: 50%;
+      position: absolute;
+      background-color: @circle-background;
+    }
+  }
+}
+
+.radial-progress {
+  @transition-length: 5s;
+  .circle .fill {
+    transform: rotate(-180deg);
+    transition: -webkit-transform @transition-length;
+    transition: -ms-transform @transition-length;
+    transition: transform @transition-length;
+  }
+}
