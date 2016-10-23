@@ -8,15 +8,15 @@ A CSS3 based radial progress bar
 1. Make sure you include the progress bar template
 2.  Create a new container in the DOM
 3. Create a new instance of the progress bar
-    ```javascript
-    var newProgressBar = new Css3ProgressBar('container1');
-    ```
+```javascript
+var newProgressBar = new Css3ProgressBar('container1');
+```
 4. Call the setProgress function to set its progress 
-    ```javascript
-    document.getElementById('percentValue').addEventListener('keyup', function() {
-        newProgressBar.setProgress(this.value);
-    }, false);
-    ```
+```javascript
+document.getElementById('percentValue').addEventListener('keyup', function() {
+newProgressBar.setProgress(this.value);
+}, false);
+```
 
 ##  Todo
 1. Create closure to make each module deal with its own mask and fill
